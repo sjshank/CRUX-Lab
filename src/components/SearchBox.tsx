@@ -33,7 +33,7 @@ const SearchBox = (): JSX.Element => {
               label="URL(s)"
               id="url"
               name="url"
-              placeholder="Enter one or more url(s)"
+              placeholder="Enter one or more url(s) using comma"
               onChange={(e) => updateUrls(e)}
             />
             <p className="text-xs text-gray-500">
