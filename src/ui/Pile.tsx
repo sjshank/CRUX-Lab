@@ -2,10 +2,9 @@ import React from "react";
 
 type PileProps = {
   val: number;
-  duration: string;
 };
 
-const Pile = ({ val, duration }: PileProps): JSX.Element => {
+const Pile = ({ val }: PileProps): JSX.Element => {
   return (
     <>
       <div

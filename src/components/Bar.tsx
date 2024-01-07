@@ -20,7 +20,7 @@ const Bar = ({ density }: BarProps) => {
             {currentStatus}
           </dt>
           <dd className="flex items-center mb-3">
-            <Pile val={density.densityInPercent} duration={density.duration} />
+            <Pile val={density.densityInPercent} />
           </dd>
         </dl>
       )}
