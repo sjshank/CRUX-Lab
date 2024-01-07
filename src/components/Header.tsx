@@ -8,6 +8,7 @@ const Header = (): JSX.Element => {
     >
       <div className="flex flex-wrap p-5 flex-col items-center justify-center">
         <h1
+          role="heading"
           className="flex title-font font-medium items-center text-page"
           aria-label="CRUX Lab"
         >

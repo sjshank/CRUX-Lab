@@ -1,10 +1,11 @@
+import React, { Suspense } from "react";
 import { useAppSelector } from "../../app/storeHooks";
-import Card from "../../components/Card";
 import FormFactorFilter from "../../components/FormFactorFilter";
 import MetricFilter from "../../components/MetricFilter";
 import StatusBar from "../../components/StatusBar";
 import { TMetricData } from "../../types/cruxMetric";
 import Loader from "../../ui/Loader";
+const LazyCardComponent = React.lazy(() => import("../../components/Card"));
 
 const MetricDataList = () => {
   const { metricData, isLoading } = useAppSelector((state) => state.metrics);
@@ -27,9 +28,13 @@ const MetricDataList = () => {
           const isFormFactorMatched =
             formFactor === "ALL" || formFactor === data.formFactor;
           return (
-            isFormFactorMatched && (
-              <Card key={data.recordId} metricData={data} />
-            )
+            <React.Fragment key={data.recordId}>
+              {isFormFactorMatched && (
+                <Suspense fallback={<Loader />}>
+                  <LazyCardComponent metricData={data} />
+                </Suspense>
+              )}
+            </React.Fragment>
           );
         })}
       </>

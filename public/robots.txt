@@ -1,0 +1,5 @@
+User-agent: * Disallow: 
+
+Sitemap : https://cruxlab.netlify.app/sitemap.xml
+
+User-Agent: AdsBot-Google

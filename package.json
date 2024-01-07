@@ -1,15 +1,18 @@
 {
-  "name": "crux_react_app",
+  "name": "crux_lab_app",
   "private": false,
   "version": "0.0.0",
   "type": "module",
-  "author": "Saurabh Shankariya",
+  "author": "Saurabh Shankariya <sshankariya@gmail.com>",
   "description": "Generate UX metric report for any origin or webpage",
-  "homepage": "/",
+  "homepage": "https://github.com/sjshank/CRUX-Lab.git",
+  "license": "MIT",
   "keywords": [
     "CRUX",
     "Web-Vitals",
-    "ReactJS"
+    "ReactJS",
+    "vite",
+    "Redux"
   ],
   "repository": "https://github.com/sjshank/CRUX-Lab.git",
   "scripts": {
