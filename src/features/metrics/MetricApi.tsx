@@ -18,6 +18,6 @@ ApiConfig.BuildQuery = (requestBody: TCruxRequest) => {
     console.error(err);
   }
 };
-const metricApi = ApiConfig.BuildQuery;
+const MetricApi = ApiConfig.BuildQuery;
 
-export default metricApi;
+export default MetricApi;

@@ -14,7 +14,11 @@ const SummaryItem: React.FunctionComponent<ItemProps> = ({
   skey,
 }: ItemProps): JSX.Element => {
   return (
-    <li className="leading-8 font-serif text-base tracking-wide">
+    <li
+      aria-label="Summary Item"
+      className="leading-8 font-serif text-base tracking-wide"
+      role="listitem"
+    >
       A URL on <span className="lowercase">{formFactor}</span> has{" "}
       <span className="font-semibold" style={{ color: percentileStatus.color }}>
         {percentileStatus.status}&nbsp;

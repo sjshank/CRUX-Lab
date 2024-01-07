@@ -37,7 +37,7 @@ const SearchBox = (): JSX.Element => {
               onChange={(e) => updateUrls(e)}
             />
             <p className="text-xs text-gray-500">
-              urls : [https://example.com, https://example.com]
+              Ex : [https://example.com, https://example.com]
             </p>
           </div>
           <Button

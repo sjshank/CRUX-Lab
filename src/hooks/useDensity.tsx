@@ -6,5 +6,5 @@ export const useDensity = (density: number, duration: string) => {
         : "Poor"
       : "Good";
 
-  return { result: result, duration: result.concat(" " + duration) };
+  return { result: result, duration: result.concat(" " + duration) } as const;
 };

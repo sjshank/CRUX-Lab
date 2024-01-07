@@ -148,7 +148,6 @@ export const transformData = (
       a.abbrev.localeCompare(b.abbrev)
     );
 
-    console.log(metricDataRecord);
     return { ...metricDataRecord, datapoints } as TMetricData;
   }
 };

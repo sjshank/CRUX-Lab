@@ -13,19 +13,24 @@ const Summary = ({ overallSummary, formFactor }: SummaryProps) => {
   return (
     <>
       {Object.entries(overallSummary).length > 0 && (
-        <section className="container mx-auto p-4 mt-3 mb-5 text-center border-t-2 border-gray-300">
+        <section
+          role="contentinfo"
+          aria-label="summary"
+          className="container mx-auto p-4 mt-3 mb-5 text-center border-t-2 border-gray-300"
+        >
           <h4 className="text-xl font-medium tracking-wider">
             Overall Summary : Poor, Need improvement or Good ?{" "}
             <p
               role="link"
               className="cursor-pointer text-base text-blue-accent underline transition duration-150 ease-in-out hover:scale-125"
               onClick={() => setShow(!show)}
+              tabIndex={0}
             >
               {!show ? "Show" : "Hide"}
             </p>
           </h4>
           {show && (
-            <ul className="p-4">
+            <ul className="p-4" role="list">
               {Object.keys(overallSummary)?.map((sKey) => {
                 if (["CLS", "LCP", "FID", "INP"].includes(sKey)) {
                   return (

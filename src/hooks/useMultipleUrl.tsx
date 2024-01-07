@@ -1,6 +1,6 @@
 import { useCallback, useState } from "react";
 
-export const useMultipleUrl = (): any => {
+export const useMultipleUrl = () => {
   const [multipleUrls, setMultipleUrls] = useState<string[]>([]);
 
   const updateUrls = useCallback(
@@ -19,5 +19,5 @@ export const useMultipleUrl = (): any => {
     [setMultipleUrls]
   );
 
-  return [multipleUrls, updateUrls];
+  return [multipleUrls, updateUrls] as const;
 };

@@ -15,11 +15,13 @@ const CardContent = ({
   densities,
   percentileStatus,
 }: CardContentProps): JSX.Element => {
-  console.log(densities);
   return (
-    <div className="flex flex-col w-full mb-4 min-h-40 p-2">
+    <div role="gridcell" className="flex flex-col w-full mb-4 min-h-40 p-2">
       <div className="flex flex-row gap-2 justify-items-start justify-start">
-        <span className="text-2xl font-serif font-semibold self-center">
+        <span
+          aria-label="Metric Abbrevation"
+          className="text-2xl font-serif font-semibold self-center"
+        >
           {abbrev}
         </span>
         <span
