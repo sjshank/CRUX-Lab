@@ -53,3 +53,6 @@ Resources :
   - https://tailwindcss.com/docs/installation
   - https://react.dev/learn
   - https://vitejs.dev/
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                                                                  Designed by Saurabh Shankariya
