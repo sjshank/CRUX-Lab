@@ -1,6 +1,9 @@
 # CRUX-Lab
 Generate UX metrics report for any webpage
 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 #snapshots 
 
 Landing Page
@@ -15,15 +18,23 @@ Search Result  : Single/Multiple query
 
 
 Random Filter
+
 <img width="1467" alt="image" src="https://github.com/sjshank/CRUX-Lab/assets/17022643/00723d8b-c336-43b5-b641-1cddb66d56a7">
 
 
 Mobile Device
+
 <img width="303" alt="image" src="https://github.com/sjshank/CRUX-Lab/assets/17022643/32409716-7fd1-4d97-a2c2-972f6bffaee8">
 
 Tab Device
+
 <img width="386" alt="image" src="https://github.com/sjshank/CRUX-Lab/assets/17022643/79ecbd68-1772-4dab-abc4-91f6f2c69957">
 
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+#Instructions
 
 
 How to run in local ?
