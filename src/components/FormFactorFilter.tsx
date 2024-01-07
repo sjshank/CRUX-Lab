@@ -21,6 +21,8 @@ const FORM_FACTOR_OPTIONS = [
 const FormFactorFilter = (): JSX.Element => {
   const { formFactor } = useAppSelector((state) => state.filter);
   const dispatch = useAppDispatch();
+
+  //Handle user filter action
   const handleFormFactorChange = useCallback(
     (e: React.ChangeEvent<HTMLSelectElement>) => {
       e.preventDefault();

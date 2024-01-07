@@ -1,5 +1,7 @@
 import { TCruxApi } from "../types";
 
+// Configuration for CRUX-API
+
 export const ApiConfig: TCruxApi = {} as TCruxApi;
 
 ApiConfig.API_KEY = import.meta.env.VITE_CRUX_API_KEY;

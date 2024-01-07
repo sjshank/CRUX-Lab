@@ -6,6 +6,7 @@ type Props = {
 };
 type SelectProps = Props & React.ComponentPropsWithoutRef<"select">;
 
+//DRY
 const Select = ({
   label,
   id,

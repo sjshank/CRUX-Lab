@@ -14,6 +14,7 @@ const INIT_STATE: TInitialState = {
   metricData: [] as TMetricData[],
 };
 
+//async crux-api all using middleware thunk
 export const fetchMetrics = createAsyncThunk(
   "metrics/fetchMetrics",
   async ({ url, formFactor }: { url: string; formFactor: TFormFactor }) => {
@@ -32,6 +33,7 @@ export const fetchMetrics = createAsyncThunk(
   }
 );
 
+// Manage state for metric data
 const metricSlice = createSlice({
   name: "metrics",
   initialState: INIT_STATE,

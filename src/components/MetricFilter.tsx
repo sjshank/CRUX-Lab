@@ -29,6 +29,8 @@ const METRIC_OPTIONS = [
 const MetricFilter = (): JSX.Element => {
   const { metricAbbrev } = useAppSelector((state) => state.filter);
   const dispatch = useAppDispatch();
+
+  //Handle user filter action
   const handleMetricChange = useCallback(
     (e: React.ChangeEvent<HTMLSelectElement>) => {
       e.preventDefault();

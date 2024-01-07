@@ -4,6 +4,7 @@ type ErrorProps = {
   errMsg: string;
 };
 
+// Error bar for each card. //DRY
 const ErrorBar = ({
   errMsg = "Something went wrong ! Please try again.",
 }: ErrorProps): JSX.Element => {

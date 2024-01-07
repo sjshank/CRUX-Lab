@@ -3,6 +3,7 @@ import { TPeriodCollection } from "../types/cruxMetric";
 
 type CardFooterProps = TPeriodCollection;
 
+// render footer for card
 const CardFooter: React.FunctionComponent<CardFooterProps> = ({
   firstDate,
   lastDate,

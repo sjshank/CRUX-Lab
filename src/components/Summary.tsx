@@ -8,6 +8,7 @@ type SummaryProps = {
   formFactor: TFormFactor;
 };
 
+// render overall summary of the metric
 const Summary = ({ overallSummary, formFactor }: SummaryProps) => {
   const [show, setShow] = useState<boolean>(false);
   return (

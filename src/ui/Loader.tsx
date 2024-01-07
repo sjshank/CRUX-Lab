@@ -1,5 +1,6 @@
 import React from "react";
 
+//DRY
 const Loader = (): JSX.Element => {
   return (
     <button

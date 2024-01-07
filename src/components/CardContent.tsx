@@ -10,6 +10,7 @@ type TContent = {
 };
 type CardContentProps = TContent;
 
+// render body of the metric data card
 const CardContent = ({
   abbrev,
   densities,

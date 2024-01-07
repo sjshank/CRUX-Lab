@@ -1,5 +1,6 @@
 import React from "react";
 
+// render app footer content
 const Footer = (): JSX.Element => {
   return (
     <footer aria-labelledby="footer" className="body-font bg-header">

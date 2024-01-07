@@ -4,6 +4,7 @@ type PileProps = {
   val: number;
 };
 
+//DRY
 const Pile = ({ val }: PileProps): JSX.Element => {
   return (
     <>

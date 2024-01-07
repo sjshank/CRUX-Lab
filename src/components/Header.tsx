@@ -1,5 +1,6 @@
 import React from "react";
 
+// render app header content
 const Header = (): JSX.Element => {
   return (
     <header

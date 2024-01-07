@@ -2,6 +2,7 @@ import React, { useCallback } from "react";
 import { useAppDispatch, useAppSelector } from "../app/storeHooks";
 import { toggleStatus } from "../features/filter/FilterSlice";
 
+//render status filter section
 const StatusBar = (): JSX.Element => {
   const dispatch = useAppDispatch();
   const { status } = useAppSelector((state) => state.filter);

@@ -8,6 +8,7 @@ type ItemProps = {
   skey: string;
 };
 
+// summary content - each item
 const SummaryItem: React.FunctionComponent<ItemProps> = ({
   formFactor,
   percentileStatus,

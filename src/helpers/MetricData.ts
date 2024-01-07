@@ -32,6 +32,7 @@ const populateStatus = (percent: number, status: TStatus) => {
   } as TPercentileStatus;
 };
 
+// generate performance & status
 const generatePercentileAndStatus = (
   abbrev: string,
   percentile: number
@@ -95,6 +96,7 @@ const generatePercentileAndStatus = (
   }
 };
 
+// helper to transform CRUX response into linear rendering format
 export const transformData = (
   cruxResponse: TCruxResponse,
   arg: any

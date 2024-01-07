@@ -4,6 +4,7 @@ type InputProps = {
   label: string;
 } & React.ComponentPropsWithoutRef<"textarea">;
 
+//DRY
 const InputTextArea = ({
   id,
   name,

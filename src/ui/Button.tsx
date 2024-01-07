@@ -6,6 +6,7 @@ type Props = {
 
 type ButtonProps = Props & React.ComponentPropsWithoutRef<"button">;
 
+//DRY
 const Button = ({ label, type, title, disabled }: ButtonProps) => {
   return (
     <button

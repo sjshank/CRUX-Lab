@@ -3,6 +3,7 @@ import { TRecordKey } from "../types/cruxMetric";
 
 type CardHeaderProps = TRecordKey;
 
+// render header for the card
 const CardHeader: React.FunctionComponent<CardHeaderProps> = ({
   formFactor,
   url,

@@ -5,6 +5,7 @@ type FormProps = {
   children: JSX.Element;
 };
 
+// form container for search input box
 const SearchForm = ({ handleSubmit, children }: FormProps) => {
   return (
     <form
@@ -18,4 +19,5 @@ const SearchForm = ({ handleSubmit, children }: FormProps) => {
   );
 };
 
-export default SearchForm;
+const MemoizedSearchForm = React.memo(SearchForm);
+export default MemoizedSearchForm;

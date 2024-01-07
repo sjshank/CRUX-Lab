@@ -7,6 +7,7 @@ type BarProps = {
   density: TDensitiesInPercent;
 };
 
+// render each metric performance datapoint
 const Bar = ({ density }: BarProps) => {
   const { status } = useAppSelector((state) => state.filter);
   const { result, duration } = useDensity(

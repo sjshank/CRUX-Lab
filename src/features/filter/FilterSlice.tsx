@@ -11,16 +11,20 @@ const FILTER_STATE: TFilter = {
   status: "",
 };
 
+// manage filters for application
 const filterSlice = createSlice({
   name: "filter",
   initialState: FILTER_STATE,
   reducers: {
+    // Filter : Form factor
     filterByFormFactor: (state, action) => {
       state.formFactor = action["payload"];
     },
+    // Filter : Metric
     filterByMetric: (state, action) => {
       state.metricAbbrev = action["payload"];
     },
+    // Filter : Good, Average, Poor
     toggleStatus: (state, action) => {
       state.status = action["payload"];
     },

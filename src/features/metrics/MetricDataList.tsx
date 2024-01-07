@@ -7,6 +7,7 @@ import { TMetricData } from "../../types/cruxMetric";
 import Loader from "../../ui/Loader";
 const LazyCardComponent = React.lazy(() => import("../../components/Card"));
 
+// Render result in card format for single/multiple query
 const MetricDataList = () => {
   const { metricData, isLoading } = useAppSelector((state) => state.metrics);
   const { formFactor } = useAppSelector((state) => state.filter);

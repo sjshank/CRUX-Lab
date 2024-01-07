@@ -1,5 +1,6 @@
 import { useCallback, useState } from "react";
 
+// User URL input handler using hook. Handles single/multiple query
 export const useMultipleUrl = () => {
   const [multipleUrls, setMultipleUrls] = useState<string[]>([]);
 

@@ -8,6 +8,7 @@ type Props = {
 
 type FilterProps = Props & React.ComponentPropsWithoutRef<"select">;
 
+// connected filter (Dependency Inversion) for multiple filters
 const ConnectedFilter: React.FunctionComponent<FilterProps> = (
   inputProps: FilterProps
 ): JSX.Element => {

@@ -1,6 +1,7 @@
 import { ApiConfig } from "../../config/cruxApi";
 import { TCruxRequest, TCruxResponse } from "../../types/cruxMetric";
 
+// Build CRUX API query using request body
 ApiConfig.BuildQuery = (requestBody: TCruxRequest) => {
   try {
     return fetch(ApiConfig.API_ENDPOINT, {

@@ -7,10 +7,12 @@ import { useMultipleUrl } from "../hooks/useMultipleUrl";
 import SearchForm from "./SearchForm";
 import { clearAllFilter } from "../features/filter/FilterSlice";
 
+// render & handle search content, action
 const SearchBox = (): JSX.Element => {
   const [multipleUrls, updateUrls] = useMultipleUrl();
   const dispatch = useAppDispatch();
 
+  //Handle user search action
   const handleSearch = useCallback(
     (e: FormEvent) => {
       e.preventDefault();

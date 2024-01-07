@@ -11,6 +11,7 @@ type CardProps = {
   metricData: TMetricData;
 };
 
+// render each metric data in card layout
 const Card = ({ metricData }: CardProps): JSX.Element => {
   const { metricAbbrev } = useAppSelector((state) => state.filter);
   return (
