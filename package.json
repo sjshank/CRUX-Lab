@@ -1,7 +1,7 @@
 {
   "name": "crux_lab_app",
   "private": false,
-  "version": "0.0.0",
+  "version": "0.1",
   "type": "module",
   "author": "Saurabh Shankariya <sshankariya@gmail.com>",
   "description": "Generate UX metric report for any origin or webpage",
