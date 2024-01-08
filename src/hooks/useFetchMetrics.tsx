@@ -1,35 +1,50 @@
 import { useEffect, useState } from "react";
 import { TCruxResponse, TMetricData } from "../types/cruxMetric";
-import { useAppDispatch } from "../app/storeHooks";
-import { fetchMetrics } from "../features/metrics/MetricSlice";
 import { transformData } from "../helpers/MetricData";
+import MetricApi from "../features/metrics/MetricApi";
+import { TFormFactor } from "../types";
 
 export const useFetchMetrics = (urls: string[]) => {
   const [isLoading, setIsLoading] = useState(false);
   const [metricData, setMetricData] = useState<TMetricData[]>(
     [] as TMetricData[]
   );
-  const dispatch = useAppDispatch();
 
   let promises: any = [];
+  const fetchMetrics = async ({
+    url,
+    formFactor,
+  }: {
+    url: string;
+    formFactor: TFormFactor;
+  }) => {
+    const data = await MetricApi({
+      url,
+      formFactor,
+    })
+      .then((response: TCruxResponse) => {
+        return response;
+      })
+      .catch((response: TCruxResponse) => {
+        return response;
+      });
+
+    return data as TCruxResponse;
+  };
   useEffect(() => {
     if (urls.length > 0) {
       setMetricData([]);
       setIsLoading(true);
       urls.forEach((url) => {
         promises.push(
-          dispatch(fetchMetrics({ url: url, formFactor: "DESKTOP" }))
-            .unwrap()
-            .then((data) => {
-              return { ...data, url, formFactor: "DESKTOP" };
-            })
+          fetchMetrics({ url: url, formFactor: "DESKTOP" }).then((data) => {
+            return { ...data, url, formFactor: "DESKTOP" };
+          })
         );
         promises.push(
-          dispatch(fetchMetrics({ url: url, formFactor: "PHONE" }))
-            .unwrap()
-            .then((data) => {
-              return { ...data, url, formFactor: "PHONE" };
-            })
+          fetchMetrics({ url: url, formFactor: "PHONE" }).then((data) => {
+            return { ...data, url, formFactor: "PHONE" };
+          })
         );
       });
       Promise.all(promises)
