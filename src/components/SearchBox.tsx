@@ -7,8 +7,12 @@ import { useMultipleUrl } from "../hooks/useMultipleUrl";
 import SearchForm from "./SearchForm";
 import { clearAllFilter } from "../features/filter/FilterSlice";
 
+type SearchBoxProps = {
+  doSearch: (urls: string[]) => void;
+};
+
 // render & handle search content, action
-const SearchBox = (): JSX.Element => {
+const SearchBox = ({ doSearch }: SearchBoxProps): JSX.Element => {
   const [multipleUrls, updateUrls] = useMultipleUrl();
   const dispatch = useAppDispatch();
 
@@ -17,12 +21,12 @@ const SearchBox = (): JSX.Element => {
     (e: FormEvent) => {
       e.preventDefault();
       dispatch(clearAllFilter());
-
-      Array.isArray(multipleUrls) &&
-        multipleUrls.forEach((url: string) => {
-          dispatch(fetchMetrics({ url: url, formFactor: "DESKTOP" }));
-          dispatch(fetchMetrics({ url: url, formFactor: "PHONE" }));
-        });
+      doSearch(multipleUrls);
+      // Array.isArray(multipleUrls) &&
+      //   multipleUrls.forEach((url: string) => {
+      //     dispatch(fetchMetrics({ url: url, formFactor: "DESKTOP" }));
+      //     dispatch(fetchMetrics({ url: url, formFactor: "PHONE" }));
+      //   });
     },
     [multipleUrls, dispatch]
   );

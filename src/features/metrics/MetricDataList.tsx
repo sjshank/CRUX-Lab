@@ -1,16 +1,28 @@
-import React, { Suspense } from "react";
-import { useAppSelector } from "../../app/storeHooks";
+import React, { Suspense, useEffect, useState } from "react";
+import { useAppDispatch, useAppSelector } from "../../app/storeHooks";
 import FormFactorFilter from "../../components/FormFactorFilter";
 import MetricFilter from "../../components/MetricFilter";
 import StatusBar from "../../components/StatusBar";
-import { TMetricData } from "../../types/cruxMetric";
+import {
+  TCruxDataResponse,
+  TCruxErrorResponse,
+  TCruxResponse,
+  TMetricData,
+} from "../../types/cruxMetric";
 import Loader from "../../ui/Loader";
+import { fetchMetrics } from "./MetricSlice";
+import { transformData } from "../../helpers/MetricData";
+import { useFetchMetrics } from "../../hooks/useFetchMetrics";
 const LazyCardComponent = React.lazy(() => import("../../components/Card"));
 
+type MetricListProps = {
+  urls: string[];
+};
+
 // Render result in card format for single/multiple query
-const MetricDataList = () => {
-  const { metricData, isLoading } = useAppSelector((state) => state.metrics);
+const MetricDataList = ({ urls }: MetricListProps) => {
   const { formFactor } = useAppSelector((state) => state.filter);
+  const [metricData, isLoading] = useFetchMetrics(urls);
 
   const content =
     metricData.length > 0 ? (
