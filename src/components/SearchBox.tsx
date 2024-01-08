@@ -1,7 +1,6 @@
 import { FormEvent, useCallback } from "react";
 import Button from "../ui/Button";
 import { useAppDispatch } from "../app/storeHooks";
-import { fetchMetrics } from "../features/metrics/MetricSlice";
 import InputTextArea from "../ui/InputTextArea";
 import { useMultipleUrl } from "../hooks/useMultipleUrl";
 import SearchForm from "./SearchForm";
@@ -22,11 +21,6 @@ const SearchBox = ({ doSearch }: SearchBoxProps): JSX.Element => {
       e.preventDefault();
       dispatch(clearAllFilter());
       doSearch(multipleUrls);
-      // Array.isArray(multipleUrls) &&
-      //   multipleUrls.forEach((url: string) => {
-      //     dispatch(fetchMetrics({ url: url, formFactor: "DESKTOP" }));
-      //     dispatch(fetchMetrics({ url: url, formFactor: "PHONE" }));
-      //   });
     },
     [multipleUrls, dispatch]
   );

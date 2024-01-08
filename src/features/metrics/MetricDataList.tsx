@@ -1,17 +1,11 @@
-import React, { Suspense, useEffect, useState } from "react";
-import { useAppDispatch, useAppSelector } from "../../app/storeHooks";
+import React, { Suspense } from "react";
+import { useAppSelector } from "../../app/storeHooks";
 import FormFactorFilter from "../../components/FormFactorFilter";
 import MetricFilter from "../../components/MetricFilter";
 import StatusBar from "../../components/StatusBar";
-import {
-  TCruxDataResponse,
-  TCruxErrorResponse,
-  TCruxResponse,
-  TMetricData,
-} from "../../types/cruxMetric";
+import { TMetricData } from "../../types/cruxMetric";
 import Loader from "../../ui/Loader";
-import { fetchMetrics } from "./MetricSlice";
-import { transformData } from "../../helpers/MetricData";
+
 import { useFetchMetrics } from "../../hooks/useFetchMetrics";
 const LazyCardComponent = React.lazy(() => import("../../components/Card"));
 
